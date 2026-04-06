@@ -1,33 +1,20 @@
-// Intersection Observer for Scroll Reveals
-const observerOptions = { threshold: 0.1 };
+// High-end entrance for cards using GSAP
+gsap.from(".service-card", {
+    duration: 1.2,
+    y: 50,
+    opacity: 0,
+    stagger: 0.2,
+    ease: "power4.out"
+});
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-            
-            // If it contains a counter, trigger it
-            const counters = entry.target.querySelectorAll('.counter');
-            if (counters) {
-                counters.forEach(count => startCounter(count));
-            }
+// Scroll-triggered animations for content
+window.addEventListener('scroll', () => {
+    let reveals = document.querySelectorAll('.hover-up');
+    reveals.forEach(el => {
+        let windowHeight = window.innerHeight;
+        let revealTop = el.getBoundingClientRect().top;
+        if (revealTop < windowHeight - 100) {
+            el.classList.add('animate__animated', 'animate__fadeInUp');
         }
     });
-}, observerOptions);
-
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-// Counter Logic
-function startCounter(el) {
-    const target = +el.getAttribute('data-target');
-    const count = +el.innerText;
-    const speed = 200;
-    const inc = target / speed;
-
-    if (count < target) {
-        el.innerText = Math.ceil(count + inc);
-        setTimeout(() => startCounter(el), 1);
-    } else {
-        el.innerText = target + "+";
-    }
-}
+});

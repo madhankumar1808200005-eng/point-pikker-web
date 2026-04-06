@@ -1,25 +1,25 @@
-// Navbar Background Change on Scroll
-window.addEventListener('scroll', () => {
-    const nav = document.getElementById('main-nav');
+// Navbar Scroll Transition
+window.onscroll = function() {
+    const nav = document.querySelector('.navbar');
     if (window.scrollY > 50) {
-        nav.classList.add('scrolled');
+        nav.classList.add('py-2', 'shadow-lg');
     } else {
-        nav.classList.remove('scrolled');
+        nav.classList.remove('py-2', 'shadow-lg');
     }
-});
+};
 
-// Enquiry Button Click Simulation
-document.getElementById('open-enquiry').addEventListener('click', () => {
-    // In a production environment, this would open a Modal or scroll to a form
-    alert("Enquiry Portal Opening... Redirecting to Secure Form.");
+// Enquiry Button logic
+document.getElementById('enquiryBtn').addEventListener('click', () => {
+    const contactSection = document.querySelector('#curriculum');
+    contactSection.scrollIntoView({ behavior: 'smooth' });
+    alert("Enquiry Form Initialized for Point Pikker Groups.");
 });
 
 // Smooth Scroll for Nav Links
-document.querySelectorAll('.nav-menu a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const targetId = this.getAttribute('href');
-        document.querySelector(targetId).scrollIntoView({
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
     });

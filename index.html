@@ -3,63 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POINT PIKKER | GROUPS - Premium IT Solutions & Training</title>
+    <title>POINT PIKKER | GROUPS - Premium IT & Training</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="bg-black text-white">
 
-    <nav class="navbar" id="main-nav">
-        <div class="nav-container">
-            <div class="logo">POINT PIKKER <span>| GROUPS</span></div>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Service</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="enquiry-btn" id="open-enquiry">Enquiry</button>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">POINT PIKKER <span class="text-info">| GROUPS</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#curriculum">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <button class="btn btn-info fw-bold px-4 rounded-pill shadow-lg" id="enquiryBtn">Enquiry</button>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <main>
-        <section id="home" class="hero-section">
-            <div class="hero-content reveal">
-                <h1>Engineering <span class="gradient-text">Digital Impact</span></h1>
-                <p>High-end software development and professional IT training for global leaders.</p>
-                <div class="hero-btns">
-                    <button class="primary-btn">Our Services</button>
-                    <button class="secondary-btn">Start Learning</button>
+    <section id="home" class="hero-wrap d-flex align-items-center">
+        <div class="container text-center">
+            <h1 class="display-1 fw-black animate__animated animate__fadeInDown">Architecting <span class="text-gradient">Innovation</span></h1>
+            <p class="lead text-secondary mb-5 animate__animated animate__fadeInUp animate__delay-1s">Enterprise Software Solutions & Production-Level Technical Training.</p>
+            <div class="animate__animated animate__zoomIn animate__delay-2s">
+                <a href="#services" class="btn btn-outline-info btn-lg me-3">Our Services</a>
+                <a href="#curriculum" class="btn btn-info btn-lg text-black fw-bold">Explore Courses</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-100">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Expertise <span class="text-info">&</span> Solutions</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card bg-dark border-secondary h-100 p-4 hover-up">
+                        <i class="fa-solid fa-code fa-3x text-info mb-3"></i>
+                        <h4 class="fw-bold">MERN Development</h4>
+                        <p class="text-secondary">Full-stack scalable web applications built with MongoDB, Express, React, and Node.js.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-dark border-secondary h-100 p-4 hover-up">
+                        <i class="fa-solid fa-graduation-cap fa-3x text-info mb-3"></i>
+                        <h4 class="fw-bold">Technical Training</h4>
+                        <p class="text-secondary">Industry-standard HTML, CSS, and JS mentoring designed for production readiness.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-dark border-secondary h-100 p-4 hover-up">
+                        <i class="fa-solid fa-cloud fa-3x text-info mb-3"></i>
+                        <h4 class="fw-bold">DevOps & AWS</h4>
+                        <p class="text-secondary">Infrastructure automation and CI/CD pipeline integration for global enterprises.</p>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="services" class="services-grid">
-            <div class="section-title reveal">
-                <h2>Core Expertise</h2>
+    <section id="curriculum" class="py-100 bg-dark-soft">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1200" class="img-fluid rounded-4 shadow-2xl border border-info" alt="Coding">
+                </div>
+                <div class="col-lg-6 ps-lg-5 mt-5 mt-lg-0">
+                    <h2 class="display-5 fw-bold mb-4">Production-Level <br><span class="text-info">Curriculum</span></h2>
+                    <div class="accordion accordion-flush" id="eduAccordion">
+                        <div class="accordion-item bg-transparent text-white">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed bg-transparent text-white border-bottom border-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#c1">HTML5: Semantic Engine</button></h2>
+                            <div id="c1" class="accordion-collapse collapse" data-bs-parent="#eduAccordion"><div class="accordion-body text-secondary">SEO architecture, ARIA labels, and High-Performance DOM structure.</div></div>
+                        </div>
+                        <div class="accordion-item bg-transparent text-white">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed bg-transparent text-white border-bottom border-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#c2">CSS3: Modern Design</button></h2>
+                            <div id="c2" class="accordion-collapse collapse" data-bs-parent="#eduAccordion"><div class="accordion-body text-secondary">Bootstrap 5, Tailwind, CSS Grid, and Cinematic Animations.</div></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="cards-container">
-                <div class="glass-card reveal">
-                    <h3>Software Solutions</h3>
-                    <p>MERN stack and Cloud architecture for enterprise scale.</p>
-                </div>
-                <div class="glass-card reveal">
-                    <h3>IT Training</h3>
-                    <p>Production-level HTML, CSS, JS, and DevOps coaching.</p>
-                </div>
-                <div class="glass-card reveal">
-                    <h3>UI/UX Design</h3>
-                    <p>Cinematic, modern interfaces built for performance.</p>
-                </div>
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="stats-section reveal">
-            <div class="stat-item"><h2 class="counter" data-target="100">0</h2><p>Live Projects</p></div>
-            <div class="stat-item"><h2 class="counter" data-target="500">0</h2><p>Students Trained</p></div>
-        </section>
-    </main>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/interaction.js"></script>
 </body>
