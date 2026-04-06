@@ -1,19 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Point Pikker</title>
-  <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POINT PIKKER | GROUPS - Premium IT Solutions & Training</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Point Pikker Web</h1>
 
-    <p>ABCD</p>
+    <nav class="navbar" id="main-nav">
+        <div class="nav-container">
+            <div class="logo">POINT PIKKER <span>| GROUPS</span></div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Service</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="enquiry-btn" id="open-enquiry">Enquiry</button>
+        </div>
+    </nav>
 
-    <p>mghg</p>
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content reveal">
+                <h1>Engineering <span class="gradient-text">Digital Impact</span></h1>
+                <p>High-end software development and professional IT training for global leaders.</p>
+                <div class="hero-btns">
+                    <button class="primary-btn">Our Services</button>
+                    <button class="secondary-btn">Start Learning</button>
+                </div>
+            </div>
+        </section>
 
-  <script src="js/animations.js"></script>
-  <script src="js/interaction.js"></script>
+        <section id="services" class="services-grid">
+            <div class="section-title reveal">
+                <h2>Core Expertise</h2>
+            </div>
+            <div class="cards-container">
+                <div class="glass-card reveal">
+                    <h3>Software Solutions</h3>
+                    <p>MERN stack and Cloud architecture for enterprise scale.</p>
+                </div>
+                <div class="glass-card reveal">
+                    <h3>IT Training</h3>
+                    <p>Production-level HTML, CSS, JS, and DevOps coaching.</p>
+                </div>
+                <div class="glass-card reveal">
+                    <h3>UI/UX Design</h3>
+                    <p>Cinematic, modern interfaces built for performance.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section reveal">
+            <div class="stat-item"><h2 class="counter" data-target="100">0</h2><p>Live Projects</p></div>
+            <div class="stat-item"><h2 class="counter" data-target="500">0</h2><p>Students Trained</p></div>
+        </section>
+    </main>
+
+    <script src="js/animations.js"></script>
+    <script src="js/interaction.js"></script>
 </body>
 </html>
